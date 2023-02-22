@@ -26,6 +26,10 @@ header{
    z-index: 2;
 }
 
+.menu-btn, .menu{
+   display: none;
+}
+
 nav{
    margin: 0 212px;
 }
@@ -336,4 +340,161 @@ footer a{
 
 .icon a{
    margin-right: 30px;
+}
+
+/* adaptiv */
+@media (max-width: 480px){
+
+   header{
+      justify-content: space-between;
+      padding: 15px 35px;
+   }
+
+   nav{
+      display: none;
+   }
+
+   .menu-btn {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index:2;
+      overflow: hidden;
+   }
+   .menu-btn span {
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #FFFFFF;
+      transition: all 0.5s;
+   }
+   .menu-btn span:nth-of-type(2) {
+      top: calc(50% - 5px);
+   }
+   .menu-btn span:nth-of-type(3) {
+      width: 30px;
+      left: 100%;
+      top: calc(50% + 5px);
+   }
+
+   .menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+     background: black;
+      transform: translateX(100%);
+      transition: transform 0.5s; 
+   }
+
+   .menu > li {
+      list-style: none;
+   }
+
+
+   .menu.active {
+      transform: translateX(20%);
+      /* padding: 50px; */
+   }
+
+   .menu.active > ul{
+      margin-top: 100px;
+   }
+
+   .menu.active > ul > li{
+      margin: 40px 0 0 50px;
+   }
+
+   .menu.active > ul > li > a{
+      font-family: 'Mplus 1p';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #FFFFFF;
+   }
+
+   .submenu-adaptiv > ul > li{
+      margin-top: 30px;
+   }
+
+   .submenu-adaptiv > ul > li > a{
+      font-family: 'Mplus 1p';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.01em;
+      color: #FFFFFF;
+   }
+
+   
+
+   /* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+   display: none;
+ }
+ .menu-btn.active span:nth-of-type(2) {
+   top: 50%;
+   transform: translate(-50%, 0%) rotate(45deg);  
+ }
+ .menu-btn.active span:nth-of-type(3) {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, 0%) rotate(-45deg); 
+ }
+
+ /* faq */
+
+ section{
+   padding: 15px;
+}
+
+.faq {
+   display: block;
+   /* justify-content: space-around; */
+}
+
+.faq h2{
+   font-size: 40px;
+   margin-bottom: 20px;
+}
+
+.faq-text{
+   width: 100%;
+}
+
+.accordion{
+   font-family: 'M PLUS 1';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 35px;
+   color: #FFFFFF;
+   border-top: 1px solid rgba(255, 255, 255, 0.2);
+   padding: 30px 0;
+   cursor: pointer;
+}
+
+
+.content{
+   font-family: 'Mplus 1p';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   color: #FFFFFF;
+   margin-bottom: 30px;
+   max-height: 0;
+   overflow: hidden;
+   transition: 0.3s ease-in-out;
+   
+}
 }

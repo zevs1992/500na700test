@@ -343,7 +343,7 @@ footer a{
 }
 
 /* adaptiv */
-@media (max-width: 480px){
+@media (max-width: 400px){
 
    header{
       justify-content: space-between;
@@ -451,6 +451,34 @@ footer a{
    transform: translate(-50%, 0%) rotate(-45deg); 
  }
 
+ /* slider */
+
+.image-slider_swiper {
+   margin-top: 130px;
+   overflow: hidden;
+ }
+
+ .image-slider_image{
+   text-align: center;
+   color: #FFFFFF;
+ }
+
+ .image-slider_image img{
+   max-width: 90%;
+   height: 480px;
+ }
+
+ .button-slider{
+   display: flex;
+   justify-content: center;
+ }
+
+ .s-button-prev, .s-button-next{
+   margin: 50px;
+   color: #FFFFFF;
+   cursor: pointer;
+ }
+
  /* faq */
 
  section{
@@ -496,5 +524,53 @@ footer a{
    overflow: hidden;
    transition: 0.3s ease-in-out;
    
+}
+
+/* form */
+
+form{
+   background-color: #FFFFFF;
+   padding: 30px 15px;
+}
+
+form h3{
+   font-size: 40px;
+}
+
+input{
+   width: 289px;
+   height: 48px;
+   border: 1px solid rgba(11, 10, 13, 0.2);
+   margin: 10px 0;
+   padding: 15px 15px 15px 20px;
+}
+
+form > button{
+   width: 124px;
+   height: 44px;
+   border: 1px solid rgba(11, 10, 13, 0.2);
+   font-size: 14px;
+   line-height: 18px;
+}
+
+form > button:hover{
+   background-color: #75FF72;
+}
+
+/* footer */
+footer{
+   display: block;
+   /* justify-content: space-between; */
+   padding: 80px 15px;
+}
+
+.icon{
+   margin: 40px 0;
+   text-align: center;
+}
+
+
+.icon a{
+   margin-right: 30px;
 }
 }

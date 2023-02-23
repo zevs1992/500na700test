@@ -10,6 +10,12 @@ const swiper = new Swiper('.image-slider_swiper', {
    spaceBetween: 20,
    centeredSlides: true,
    loop: true,
+   breakpoints: {
+    320:{
+        slidesPerView: 1,
+        spaceBetween: 15,
+    }
+   },
 });
 
 document.querySelectorAll('.accordion').forEach((el)=>{

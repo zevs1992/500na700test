@@ -11,13 +11,24 @@ const swiper = new Swiper('.image-slider_swiper', {
    centeredSlides: true,
    loop: true,
    breakpoints: {
-    320:{
+    400:{
         slidesPerView: 1,
         spaceBetween: 15,
     }
    },
 });
 
+// slider adaptiv news
+const swiperNews = new Swiper('.news-slider', {
+ 
+    autoHeight: true,
+    slidesPerView: 1.7,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+ });
+
+//  accordion
 document.querySelectorAll('.accordion').forEach((el)=>{
    el.addEventListener('click', () => {
       let content = el.nextElementSibling;
